@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
 
    /* PRESET FLAGS & DEFAULT VALUES */
    telescope_id = 12;
-   machine_id = 10;
+   machine_id = 13;
    data_type = 1;
    barycentre = 0;
    pulsarcentre = 0;
@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
       printf("\nUsage: mockHeader [parameters] <header_filename>\n");
       printf("\nAvailable parameters are:\n");
       printf("-tel      Telescope identifier (FR606: 12, DE601: 13, UK608: 14, etc.; default: %d)\n", telescope_id);
-      printf("-mach     Machine identifier (Fake: 0, ARTEMIS: 10, DSP-Z: 12, etc.; default: %d)\n", machine_id);
+      printf("-mach     Machine identifier (Fake: 0, DSP-Z: 12, ARTEMIS: 13, etc.; default: %d)\n", machine_id);
       printf("-type     Data type identifier (Raw data: 0, Filterbank: 1, etc.; default: %d)\n", data_type);
       printf("-raw      The name of the original data file (default: unset)\n");
       printf("-source   Name of the source to be written in header file (default: %s)\n", source_name);
