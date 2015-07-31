@@ -131,9 +131,9 @@ int main(int argc, char *argv[]) {
             strcpy(DecTxt, argv[argument+1]);
             sscanf(DecTxt, "%lf:%lf:%lf", &DecD, &DecM, &DecS);
             if (strncmp (DecTxt,"-",1) == 0) {
-               src_dej = (DecD * 10000.0) + (DecM * -100.0) + (-1.0 * DecS);
+               src_dej = (DecD * -10000.0) + (DecM * -100.0) + (-1.0 * DecS);
             } else {
-               src_dej = (DecD * -10000.0) + (DecM * -100.0) + ( DecS * -1.0);
+               src_dej = (DecD * 10000.0) + (DecM * 100.0) + ( DecS * 1.0);
             }
             if (src_dej < -900000.0 || src_dej >= 900000.0) {
                fprintf(stderr, "Dec value does not make sense.\n");
