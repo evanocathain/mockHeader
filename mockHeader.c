@@ -30,14 +30,14 @@ int main(int argc, char *argv[]) {
    struct tm *Tm; /* structure tm contains a calendar date and time broken down into its components, global declaration of Tm as variable of tm type */
 
    /* PRESET FLAGS & DEFAULT VALUES */
-   telescope_id = 12;
-   machine_id = 13;
+   telescope_id = 64;
+   machine_id = 64;
    data_type = 1;
    barycentre = 0;
    pulsarcentre = 0;
-   nbits = 32;
-   nsamples = 8192;
-   nchans = 1920;
+   nbits = 8;
+   nsamples = 0;
+   nchans = 4096;
    nifs = 1;
    strcpy(source_name, "J0000+0000");
    az_start = 0.0;
@@ -47,9 +47,9 @@ int main(int argc, char *argv[]) {
    GMT_Time=time(NULL); /* get current calendar time and assign it to 'GMT_Time' */
    Tm=gmtime(&GMT_Time); /* use function gmtime to transform date and time to broken-down time */
    tstart = gregjd(Tm->tm_year+1900, Tm->tm_mon+1, Tm->tm_mday, (double) Tm->tm_hour, (double) Tm->tm_min, Tm->tm_sec) - 2400000.5; /* convert the date to JD and subtract 2400000.5 to get MJD */
-   tsamp = 0.00032768;
-   fch1 = 148.828125;
-   fo = -0.003052;
+   tsamp = 153.12150;
+   fch1 = 1497.895508;
+   fo = -0.208984;
    refdm = 0.0;
    period = 0.0;
    RawDataFile = 0;
