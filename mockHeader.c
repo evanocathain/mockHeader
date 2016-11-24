@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
    pulsarcentre = 0;
    nbits = 8;
    nsamples = 0;
-   nchans = 4096;
+   nchans = 2048;
    nifs = 1;
    strcpy(source_name, "J0000+0000");
    az_start = 0.0;
